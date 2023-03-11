@@ -5,44 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style -->
     <style>
       * {
         box-sizing: border-box;
       }
+
+      html,
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        line-height: 1.17;
+      }
+
+      h1 {
+        margin: 0;
+        margin-top: 64px;
+        font-size: 64px;
+      }
+
+      h2 {
+        margin: 0;
+        margin-top: 31px;
+        font-size: 36px;
+      }
+
       section {
+        display: inline-block;
         width: 1110px;
         background-color: #c4c4c4;
         padding: 50px;
       }
+
       .main {
+        display: inline-block;
         width: 1000px;
-        background-color: #e6e6e6;
+        background: #e6e6e6;
         color: #fff;
+        margin-bottom: 50px;
+      }
+
+      .first {
+        float: left;
+      }
+
+      .second,
+      .third {
+        float: right;
+      }
+
+      .first,
+      .second {
+        background: #fc8f8f;
+        text-align: center;
+        width: 200px;
+        height: 200px;
+      }
+
+      .third {
+        display: inline-block;
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        background: #fc8f8f;
+        margin-left: 15px;
+      }
+
+      .main .main-second {
+        float: right;
+      }
+
+      .main-first .first {
+        margin-right: 15px;
+      }
+
+      .main-second .first {
+        margin-right: 0px;
+        margin-left: 15px;
+      }
+
+      .three {
+        margin-bottom: 0;
       }
     </style>
   </head>
   <body>
     <section>
       <div class="main">
-        <div>1</div>
-        <div>2</div>
+        <div class="first"><h1>1</h1></div>
+        <div class="second"><h1>2</h1></div>
       </div>
       <div class="main">
-        <div>1</div>
+        <div class="first"><h1>1</h1></div>
         <div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
+          <div class="third"><h2>5</h2></div>
+          <div class="third"><h2>4</h2></div>
+          <div class="third"><h2>3</h2></div>
+          <div class="third"><h2>2</h2></div>
         </div>
       </div>
-      <div class="main">
-        <div>
-          <div>1</div>
-          <div>2</div>
-          <div></div>
-          <div>3</div>
-          <div>4</div>
+      <div class="main three">
+        <div class="main-first">
+          <div class="first"><h1>1</h1></div>
+          <div class="first"><h1>2</h1></div>
+          <div class="main-second">
+            <div class="first"><h1>3</h1></div>
+            <div class="first"><h1>4</h1></div>
+          </div>
         </div>
       </div>
     </section>
